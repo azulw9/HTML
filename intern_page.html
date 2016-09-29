@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File storage v1.0</title>
+    <link href="css/new_styles.css" rel="stylesheet">
+    <!--link href="css/bootstrap.min.css" rel="stylesheet">-->
+    </head>
+    <body>
+        <header><div id="clear"></div>
+            <div id="fold_img"></div>
+            <div id="title">File
+	       <span>Storage </span> 
+            v 0.01
+           <span> Потеряй свои файлы красиво! </span>
+                </div>
+            <div id="fold_img"></div>
+            <div id="clear"></div>
+        </header>
+        <nav><p>Вы вошли как Иванов Иван Иванович. <a href="index_v2.html"> Выйти. </a></p></nav>
+        <main>
+            <aside>
+            <h4>Можно загружать:</h4>
+                <p>ZIP (до 20 Mb);</p>
+                <p>DOCX (до 40 Mb);</p>
+                <p>PPTX (до 50 Mb);</p>
+                <p>Объём/польз.: 45 Mb</p>
+            <h4>Использовано:</h4>
+                <p>27.43 из 100.00 Mb</p>
+                </aside>
+            <article>
+                <div class="central">
+                    <table>
+                    <tr>
+                        <td class="top-line">Файл</td>
+                        <td class="top-line">Размер (Kb)</td>
+                        <td class="top-line">Дата и время</td>
+                        <td class="top-line">Удалить</td>
+                    </tr>
+                    <tr>
+                        <td><a href="###" id="file">Это_архив_с_русским_именем.zip</a></td>
+                        <td>133.22</td>
+                        <td>2014.02.28 18:01:15</td>
+                        <td><a href="#" id="del">Удалить</a></td>
+                    </tr>
+                        <tr>
+                        <td><a href="####" id="file">_www_app.zip</a></td>
+                        <td>132.45</td>
+                        <td>2014.02.28 18:24:54</td>
+                        <td><a href="##" id="del">Удалить</a></td>
+                    </tr>
+                    </table>
+                
+                </div>                   
+                <form class="central" action="intern_page.html" id="form1">
+                    <label for="choosefile">Выберите файл</label> 
+                    <input type="file" id="choosefile">
+                    <input type="submit" id="uploadfile" value="Загрузить" class="button">
+                </form>
+                <form class="central" id="form2">
+                <label class="uploadLabel">Запросить с удаленного сервера</label>
+                    <input type="text" id="getFile" placeholder="Введите URL" class="form-control">
+                    <label id="putToStore">Поместить в хранилище:</label>
+                        <input type="checkbox" value="putToStore"> 
+                    <input type="submit" value="Запросить" id="getFromServer" class="button">
+                    
+                    
+                </form>
+            </article>
+            <aside>
+                <h4>Статистика:</h4>
+                <p>Пользователей: 123</p>
+                <p>Файлов: 1234</p>
+                <p>Объём: 2345 Mb</p>
+                <p>Объём/польз.: 45 Mb</p>
+                
+            </aside>
+        </main>
+        <footer>
+        <p>&copy; 2016, EPAM RD Training Center</p>
+        </footer>        
+    </body>  
+
+</html>

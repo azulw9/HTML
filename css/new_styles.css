@@ -1,0 +1,276 @@
+/* CSS styles for index_new.html
+    Created 27.09.2016 
+    Author Molochenko Daria */
+body, html{
+    background-color: rgba(218, 218, 218, 0.95);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    font-family: Verdana;
+	font-size: 3em;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: -0.09em;
+    text-align: center;
+    font-style: italic;
+	text-shadow: 0.11em 0px 0.09em #000000;
+}
+
+#fold_img{
+    width: 10%;
+    height: 100%;
+    background-image: url(../img/folder1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+
+#title{
+    width: 50%;
+    margin: auto;
+    float: left;
+        
+}
+
+#clear{
+    float:left;
+    width:15%;
+    height: 100%;
+}
+
+
+header div span {
+	display: inline-block;
+	color: #F00000;
+}
+
+header div span+span{
+    display: block;
+    color: #2196F3;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.9px;
+    text-shadow: -2.6px 0.4px 0.09cm #171111;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    color: crimson;
+    font-size: medium;
+    font-family: Georgia;
+    text-align: right;
+    line-height: 103px;
+    text-shadow: -1px 1px 8.1px black;
+}
+
+nav p {
+    clear:both;
+    margin: 0;
+    padding-right: 2em;
+}
+
+aside {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+article {
+    height: 100%;
+    width: 60%;
+    float: left;
+    background-color: rgba(176, 186, 187, 0.62);
+}
+
+aside > p, h4 {
+    padding-left:10px;
+    margin-bottom: -13px;
+}
+
+footer {
+    clear: both;
+    height: 10%;
+    max-width: 330px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+main {
+    height: 65%;
+    background-image: url(../img/111.jpg);
+    box-shadow: 7px 7px 5px rgb(68, 62, 62);
+    background-repeat: no-repeat;
+    background-position:left; 
+    margin-right: 20px;
+}
+
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-control{
+    display: block;
+    margin-bottom: 13px;
+    margin-left: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    transition: border-color 0.4s;
+  
+}
+
+.form-control:hover{
+    border-color: #31c1ec;
+    border-style: double;
+}
+
+.sr-only{
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+.button {
+    background-color: #740609;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 7px 42px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 26px;
+    margin-left: 30%;
+    transition: box-shadow 0.4s, background-color 0.4s, color 0.4s;
+}
+
+.button:hover{
+    box-shadow: 2px 4px 7px #ab3535;
+    background-color: rgba(96, 125, 139, 0.74);
+    color: black;
+}
+
+.central{
+    max-height: 33%;
+    
+}
+.central#form1, #form2{
+    margin: 10px;   
+    font-weight: 800;
+    border: 1px solid #444040;
+    padding: 5px;
+}
+
+/*.central#form2{
+    margin-top:15px;   
+    font-weight: 800;
+}*/
+table{
+    width: 98%;
+    height: 20%;
+    font-size: medium;
+    padding-top: 5px;
+    margin: 0 auto;
+    border-spacing: 5px;
+    
+   
+}
+
+tr,td{
+    border-bottom: 1px solid black;    
+}
+
+.top-line{
+    border-top: 1px solid black;
+    text-align: center;
+    font-weight: 900;
+}
+
+td>a{
+    color:blue;
+    font-weight: 600;
+}
+
+td>a#del:visited{
+    color:purple;
+    font-weight: 400;
+}
+
+td>a#del{
+    color:red;
+    font-weight: 600;
+}
+
+td>a#file:visited{
+    color:darkgreen;
+    font-weight: 400;
+}
+
+#choosefile{
+    display: block;
+    margin-top:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+#uploadfile {
+    display: block;
+    margin-top:10px;
+    /*padding-right: 11px;
+    padding-left: 11px;*/
+    padding: 2px;
+    font-size: 14px;
+     margin-left: 0px;
+}
+
+
+/*.uploadLabel{
+    font-weight: 800;
+}*/
+
+#getFile{
+    display: block;
+    min-width: 65%;
+    max-width: 100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left: 0px;
+         
+}
+
+#getFromServer{
+    /*padding-left: 10px;
+    padding-right: 10px;*/
+    padding: 2px;
+    font-size: 14px;
+    display: block;
+    margin-top:10px;
+    margin-left: 0px;
+}
+
+#putToStore{
+    font-weight: normal;
+    font-style: italic;
+    
+}
