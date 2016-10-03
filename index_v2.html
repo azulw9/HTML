@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>File storage v1.0</title>
     <link href="css/new_styles.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script>
+      function countChar(val) {
+        var len = val.value.length;
+        if (len > 10) {
+          val.value = val.value.substring(0, 10);
+        } else {
+          $('#charNum').text(10 - len);
+        }
+      };
+        function countChar1(val) {
+        var len = val.value.length;
+        if (len > 10) {
+          val.value = val.value.substring(0, 10);
+        } else {
+          $('#charNum1').text(10 - len);
+        }
+      };
+    </script>
     </head>
     <body>
         <header>
@@ -23,12 +42,13 @@
         <main>
             <aside></aside>
             <article>
+                
                 <form class="form-signin" action="intern_page.html">
                     <label for="inputLogin" class="sr-only">Логин</label>
-                        <input type="text" id="inputLogin" class="form-control" placeholder="Введите свой логин" required autofocus>
+                        <input onkeyup="countChar(this)" type="text" id="inputLogin" class="form-control" placeholder="Введите свой логин" required autofocus><div id="charNum"></div>
                     
                     <label for="inputPassword" class="sr-only">Пароль</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Введите свой пароль" required>
+                        <input onkeyup="countChar1(this)" type="password" id="inputPassword" class="form-control" placeholder="Введите свой пароль" required><div id="charNum1"></div>
                     <div class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Запомнить меня
