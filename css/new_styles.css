@@ -119,7 +119,7 @@ main {
 }
 
 .form-signin{
-    max-width: 330px;
+    max-width: 70%;
     padding: 15px;
     margin: 0 auto;
     font-family: monospace;
@@ -276,8 +276,25 @@ td>a#file:visited{
     
 }
 
-#charNum, charNum1{
-    float: left;
+#charNum{
+    float: right;
     margin-left: 15px;
     margin-top: 5px;
+    font-size: small;
+    color: #0006ff;
+}
+
+#charNumb{
+    float: right;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: small;
+    color: #0006ff;
+}
+.arrow{
+    height:15px;
+}
+
+#login{
+    margin-right: 16px;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>File storage v1.0</title>
     <link href="css/new_styles.css" rel="stylesheet">
+  
     <!--link href="css/bootstrap.min.css" rel="stylesheet">-->
     
     </head>
@@ -36,9 +37,9 @@
                     <table id="grid">
                     <thead>
                     <tr>
-                        <th class="top-line" data-type="string">Файл</th>
-                        <th class="top-line" data-type="number">Размер (Kb)</th>
-                        <th class="top-line" data-type="string">Дата и время</th>
+                        <th class="top-line" data-type="string" style="cursor:pointer" id="file"><img src="/img/down_small.png" id="d_file" class="arrow"><img src="/img/up_small1.png" id="up_file" class="arrow">Файл</th>
+                        <th class="top-line" data-type="number" style="cursor:pointer" id = "size"><img src="/img/down_small.png" id="d_size" class="arrow" ><img src="/img/up_small1.png" id="up_size" class="arrow">Размер (Kb)</th>
+                        <th class="top-line" data-type="string" style="cursor:pointer" id="date"><img src="/img/down_small.png" id="d_date" class="arrow"><img src="/img/up_small1.png" id="up_date" class="arrow">Дата и время</th>
                         <td class="top-line" data-type="string">Удалить</td>
                     </tr>
                     </thead>
@@ -57,102 +58,7 @@
                     </tr>
                     </tbody>
                     </table>
-                    <script>
-    // сортировка таблицы
-    // использовать делегирование!
-    // должно быть масштабируемо:
-    // код работает без изменений при добавлении новых столбцов и строк
-
-    var grid = document.getElementById('grid');
-    var check = false;
-                        
-    grid.onclick = function(e) {
-        
-      if (e.target.tagName != 'TH') return;
-        
-      // Если TH -- сортируем
-      if (check == false) {sortGrid(e.target.cellIndex, e.target.getAttribute('data-type'));}
-      else { sortGridRevert(e.target.cellIndex, e.target.getAttribute('data-type'));}
-    };
-
-    function sortGrid(colNum, type) {
-      var tbody = grid.getElementsByTagName('tbody')[0];
-
-      // Составить массив из TR
-      var rowsArray = [].slice.call(tbody.rows);
-
-      // определить функцию сравнения, в зависимости от типа
-      var compare;
-
-      switch (type) {
-        case 'number':
-          compare = function(rowA, rowB) {
-            return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
-          };
-          break;
-        case 'string':
-          compare = function(rowA, rowB) {
-            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
-          };
-          break;
-      }
-      
-
-      // сортировать
-      rowsArray.sort(compare);
-
-      // Убрать tbody из большого DOM документа для лучшей производительности
-      grid.removeChild(tbody);
-
-      // добавить результат в нужном порядке в TBODY
-      // они автоматически будут убраны со старых мест и вставлены в правильном порядке
-      for (var i = 0; i < rowsArray.length; i++) {
-        tbody.appendChild(rowsArray[i]);
-      }
-
-      grid.appendChild(tbody);
-      check = true;
-    }
-    
-    function sortGridRevert(colNum, type) {
-      var tbody = grid.getElementsByTagName('tbody')[0];
-
-      // Составить массив из TR
-      var rowsArray = [].slice.call(tbody.rows);
-
-      // определить функцию сравнения, в зависимости от типа
-      var compare;
-
-      switch (type) {
-        case 'number':
-          compare = function(rowA, rowB) {
-            return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
-          };
-          break;
-        case 'string':
-          compare = function(rowA, rowB) {
-            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
-          };
-          break;
-      }
-      
-
-      // сортировать
-      rowsArray.reverse(compare);
-
-      // Убрать tbody из большого DOM документа для лучшей производительности
-      grid.removeChild(tbody);
-
-      // добавить результат в нужном порядке в TBODY
-      // они автоматически будут убраны со старых мест и вставлены в правильном порядке
-      for (var i = 0; i < rowsArray.length; i++) {
-        tbody.appendChild(rowsArray[i]);
-      }
-
-      grid.appendChild(tbody);
-      check = false;
-    }
-  </script>
+                    <script src="js/sort.js" type="text/javascript"></script>  
                 
                 </div>                   
                 <form class="central" action="intern_page.html" id="form1">
